@@ -24,5 +24,11 @@ linter:
   # avoid_print: false  # Uncomment to disable the `avoid_print` rule
   # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
+# Exclude generated files from the Dart analyzer
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+
+# Add any additional options or configurations here
+# For example, you could add more exclusions or configure additional lint rules
+
