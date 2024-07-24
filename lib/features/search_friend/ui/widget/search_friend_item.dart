@@ -59,11 +59,11 @@ class SearchFriendItem extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            SvgPicture.asset(
+            !searchFriendModel.isSent?   SvgPicture.asset(
               'assets/svgs/add.svg',
               height: 25,
               width: 25,
-            ),
+            ):const SizedBox(),
             SizedBox(
               width: 15.w,
             )

@@ -8,15 +8,16 @@ part of 'search_friend_model.dart';
 
 SearchFriendModel _$SearchFriendModelFromJson(Map<String, dynamic> json) =>
     SearchFriendModel(
-      id: json['id'] as String?,
-      firstname: json['firstname'] as String?,
-      lastname: json['lastname'] as String?,
-      email: json['email'] as String?,
-      image: json['image'] as String?,
-      isOnline: json['isOnline'] as String?,
-      friendShipId: json['friendShipId'] as String?,
-      requestId: json['requestId'] as String?,
-      createdAt: json['createdAt'] as String?,
+      json['id'] as String,
+      json['firstname'] as String,
+      json['lastname'] as String,
+      json['email'] as String,
+      json['image'] as String?,
+      json['isOnline'] as String?,
+      json['friendShipId'] as String?,
+      json['requestId'] as String?,
+      json['createdAt'] as String?,
+      json['isSent'] as bool,
     );
 
 Map<String, dynamic> _$SearchFriendModelToJson(SearchFriendModel instance) =>
@@ -30,4 +31,5 @@ Map<String, dynamic> _$SearchFriendModelToJson(SearchFriendModel instance) =>
       'friendShipId': instance.friendShipId,
       'requestId': instance.requestId,
       'createdAt': instance.createdAt,
+      'isSent': instance.isSent,
     };

@@ -4,18 +4,22 @@ part 'search_friend_model.g.dart';
 
 @JsonSerializable()
 class SearchFriendModel {
-  final String? id;
-  final String? firstname;
-  final String? lastname;
-  final String? email;
+  final String id;
+  final String firstname;
+  final String lastname;
+  final String email;
   final String? image;
   final String? isOnline;
   final String? friendShipId;
   final String? requestId;
   final String? createdAt;
+  final bool isSent;
+
+  factory SearchFriendModel.fromJson(Map<String, dynamic> json) =>
+      _$SearchFriendModelFromJson(json);
 
   SearchFriendModel(
-      {this.id,
+      this.id,
       this.firstname,
       this.lastname,
       this.email,
@@ -23,8 +27,6 @@ class SearchFriendModel {
       this.isOnline,
       this.friendShipId,
       this.requestId,
-      this.createdAt});
-
-  factory SearchFriendModel.fromJson(Map<String, dynamic> json) =>
-      _$SearchFriendModelFromJson(json);
+      this.createdAt,
+      this.isSent);
 }
